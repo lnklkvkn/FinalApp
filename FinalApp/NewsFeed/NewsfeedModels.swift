@@ -13,7 +13,7 @@ enum Newsfeed {
   enum Model {
     struct Request {
       enum RequestType {
-        case some
+        case getNewsfeed
       }
     }
     struct Response {
@@ -27,5 +27,19 @@ enum Newsfeed {
       }
     }
   }
-  
+}
+
+struct FeedViewModel {
+    struct Cell: FeedCellViewModel {
+        var iconUrlString: String
+        var name: String
+        var date: String
+        var text: String?
+        var lakes: String?
+        var comments: String?
+        var shares: String?
+        var views: String?
+    }
+    
+    let cells: [Cell]
 }

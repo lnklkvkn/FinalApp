@@ -17,10 +17,18 @@ class NewsfeedInteractor: NewsfeedBusinessLogic {
   var presenter: NewsfeedPresentationLogic?
   var service: NewsfeedService?
   
+    private var fetcher: String?
+    
   func makeRequest(request: Newsfeed.Model.Request.RequestType) {
     if service == nil {
       service = NewsfeedService()
     }
+      
+      switch request {
+          
+      case .getNewsfeed:
+          <#code#>
+      }
   }
   
 }
